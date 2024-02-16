@@ -1,0 +1,43 @@
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 685px;
+    width: 250px;
+    background-color: #333;
+    padding-top: 50px;
+    color: #fff;
+}
+
+.sidebar a {
+    padding: 10px;
+    display: block;
+    color: #fff;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+
+/* Custom CSS for content */
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+
+/* Media query for responsiveness */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-top: 15px;
+    }
+    .content {
+        margin-left: 0;
+    }
+}

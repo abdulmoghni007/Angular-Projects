@@ -1,0 +1,27 @@
+<div class="form-group m-5">
+    <label for="serviceName">Service Name</label>
+    <input type="text" class="form-control" [(ngModel)]="service">
+</div>
+{{service}}
+<div class="form-group m-5">
+    <label for="restaurantName">Restaurant Name</label>
+    <input type="text" class="form-control" [(ngModel)]="restaurant">
+</div>
+{{restaurant}}
+<div class="form-group m-5">
+    <label for="people">Number Of People</label>
+    <input type="text" class="form-control" [(ngModel)]="people">
+</div>
+{{people}}
+<div class="form-group m-5">
+    <label for="Date">Date</label>
+    <input type="date" class="form-control" [(ngModel)]="Date">
+</div>
+{{Date}}
+
+<div class="form-group m-5">
+    <label for="mobile">Number Of People</label>
+    <input type="text" class="form-control" [(ngModel)]="mobile">
+</div>
+{{mobile}}
+<button type="submit" class="btn btn-primary  mb-5 ms-5  " (click)=book()>Book Now</button>

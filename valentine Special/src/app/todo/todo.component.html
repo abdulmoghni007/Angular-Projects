@@ -1,0 +1,45 @@
+<div class="sidebar mt-5 mb-0">
+    <a (click)="all()">All</a>
+    <a (click)="remaining()">Remaining</a>
+    <a (click)="completed()">Completed</a>
+
+</div>
+
+<div class=" content ">
+    <div class="form-group m ">
+        <label for="addtask ">Add Task</label>
+        <input type="text " class="form-control " [(ngModel)]="addtasks " required> {{addtasks}}
+    </div>
+    <div class="row justify-content-center mt-1 ">
+        <div class="col-md-6 text-center ">
+            <button type="button " class="btn btn-primary rounded-pill " (click)="addTask()">Add Task</button>
+        </div>
+
+    </div>
+    <div class="display mt-4 ">
+
+        <table class="table table-dark ">
+            <thead>
+                <tr>
+                    <th scope="col ">#</th>
+                    <th scope="col ">Task</th>
+                    <th scope="col ">Status</th>
+                    <th scope="col ">change Status</th>
+                </tr>
+            </thead>
+
+            @for(data of displaytasks; track data){
+            <tbody>
+                <tr>
+                    <th scope="row ">{{$index+1}}</th>
+                    <td>{{data.name}}</td>
+                    <td>{{data.status}}</td>
+                    <td>
+                        <a class="btn btn-secondary btn-lg active " role="button " (click)="statuss($index) " aria-pressed="true ">Done</a>
+                    </td>
+                </tr>
+            </tbody>}
+        </table>
+    </div>
+
+</div>
